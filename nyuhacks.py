@@ -2,6 +2,7 @@ import tornado
 import tornado.ioloop
 import tornado.web
 from tornado.options import define, options
+from urlparse import urlparse
 
 import asyncmongo
 
@@ -12,6 +13,7 @@ import datetime
 import os.path
 
 import random
+from pymongo import MongoClient
 #import libraries
 
 # Define Port
@@ -89,6 +91,11 @@ class MainHandler(BaseHandler):
 
 class StoryHandler(BaseHandler):
 	def get(self):
+		client = MongoClient("mongodb://heroku:moistbiscuits@paulo.mongohq.com:10009/app19552629")
+		client.the_database.authenticate('heroku', 'c9d8c4495e79544798ee2c73c52ca082')
+		db = client['app19552629']
+		usercollection = db.users
+		print usercollection.find({"neighborhood": "Greenwich Village"})
 		self.render("story.html")
 
 # Input stories
