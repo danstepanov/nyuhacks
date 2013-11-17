@@ -35,7 +35,34 @@ class Application(tornado.web.Application):
         # logging.info("Static URL: {}".format(settings['static_path']))
         tornado.web.Application.__init__(self, handlers, **settings)
 
-class MainHandler(tornado.web.RequestHandler):
+class BaseHandler(tornado.web.RequestHandler):
+
+    response = {}
+
+    def _async(self, response = False, error = False):
+        if error:
+            print(error)
+
+    def _respond(self):
+        self.write(tornado.escape.json_encode(self.response))
+        print tornado.escape.json_encode(self.response)
+        self.finish()
+
+    @property
+    def db(self):
+        if not hasattr(self, '_db'):
+            self._db = asyncmongo.Client(pool_id='test_pool', host='mongohq.com', port=1000, dbuser="user", dbpass="pass", dbname="database", maxcached=10, maxconnections=1000)
+        return self._db
+
+    @property
+    def http(self):
+        self._http = tornado.httpclient.AsyncHTTPClient()
+        return self._http
+
+    def generate_id(self):
+        return hashlib.sha224(str(random.random())).hexdigest()[0:11];
+
+class MainHandler(BaseHandler):
 	@tornado.web.asynchronous
 	def get(self):
 		stories = range(100)
@@ -47,7 +74,6 @@ class MainHandler(tornado.web.RequestHandler):
 	        "location": [random.randrange(100), random.randrange(100)],
 	        "flags": 0}
 		self.render("index.html")
-		self.finish()
 
 # Input stories
 	# Title
