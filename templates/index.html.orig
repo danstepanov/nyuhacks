@@ -41,7 +41,11 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="service-item">
+<<<<<<< HEAD
+              <a href="/story.html" id="shuffle-button-home"><i class="service-icon icon-comment"></i></a>
+=======
               <a href="/story" id="shuffle-button-home"><i class="service-icon icon-comment"></i></a>
+>>>>>>> ece6d2022269fe7d0c117dae2c0e670538e10fb8
               <h4><strong>Press the button</strong> to get started exploring a<strong class="title-emphasis">NYC</strong>dote!</h4>
             </div>
           </div>

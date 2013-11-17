@@ -20,7 +20,8 @@ class Application(tornado.web.Application):
     def __init__(self, debug = False):
         handlers = [
             # Home page
-            (r"/", MainHandler)
+            (r"/", MainHandler),
+            (r"/story", StoryHandler)
         ]
         settings = dict(
             cookie_secret="/Vo=",
@@ -62,6 +63,7 @@ class BaseHandler(tornado.web.RequestHandler):
     def generate_id(self):
         return hashlib.sha224(str(random.random())).hexdigest()[0:11];
 
+
 class MainHandler(BaseHandler):
 	@tornado.web.asynchronous
 	def get(self):
@@ -74,6 +76,10 @@ class MainHandler(BaseHandler):
 	        "location": [random.randrange(100), random.randrange(100)],
 	        "flags": 0}
 		self.render("index.html")
+
+class StoryHandler(BaseHandler):
+    def get(self):
+        self.render("story.html")
 
 # Input stories
 	# Title
