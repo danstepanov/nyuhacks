@@ -46,7 +46,7 @@ class MainHandler(tornado.web.RequestHandler):
         	"body": str(random.randrange(1000000000000000)),
 	        "location": [random.randrange(100), random.randrange(100)],
 	        "flags": 0}
-		print stories
+		self.render("index.html")
 		self.finish()
 
 # Input stories
