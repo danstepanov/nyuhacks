@@ -147,7 +147,7 @@
               "\"I saw two of my best friends get killed in front of my face in Vietnam. And the worst part is-- I feel like it was my fault. We’d just gotten back to base from a 5 day mission, and we were all dirty and disgusting. Everyone wanted to rest, but I argued with my two friends and eventually convinced them to come to the well with me to bathe. When we got to the there, I told them to go first, while I stood lookout. The thing was booby trapped. When my buddy lowered the bucket to pull up some water, the whole well exploded, and they both got killed. That was on June 3rd. It’s a really hard day for me every single year.\"",
               "I just came back from a commencement ceremony. An old student of mine just got his Master's Degree in Social Work. He grew up in group homes and foster care. He was a handful back when I taught him, but we never gave up on him and he never gave up on himself. And now look at him. He's already talking about getting his doctorate. Seeing him up there in those robes-- my mind is just filled up with images from today.",
               "Living in New York is a struggle, because you're always trying to make $5 last for three days. But in a way it's romantic, because The City always gives you little ways to make it."],
-            location: ["Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "West Village", "West Village", "West Village", "West Village", "West Village", "Greenwich Village", "Greenwich Village", "West Village", "Greenwich Village", "West Village"]/*,
+            location: ["Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "West Village", "West Village", "West Village", "West Village", "West Village", "Greenwich Village", "Greenwich Village", "West Village", "Greenwich Village", "West Village"],
             audio: [
             '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120564002&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false""></iframe>',
             '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/120565733"></iframe>',
@@ -165,7 +165,7 @@
             null,
             null,
             null,
-            null] */
+            null]
         };
 
         function random(max) {
@@ -200,8 +200,15 @@
                 return storiesCopy.story[indexNumber];
             }*/
         }
-/*
+
         function returnAudio(indexNumber) {
+            if (stories.audio[indexNumber] !== null) {
+                return stories.audio[indexNumber];
+            }
+            else {
+              return "";
+            }
+          /*
             if (storiesCopy.length < 1) {
                 if (stories.audio[indexNumber] !== null) {
                     return stories.audio[indexNumber];
@@ -217,15 +224,15 @@
                 else {
                     return "";
                 }
-            }
-        }*/
+            }*/
+        }
             $(".shuffle-button").click(function() {
                 $("#storybox").animate({ opacity: 0 }, function() {
                     var indexNum = randomIndex();
-                    // $("#voicebox").empty();
+                    $("#voicebox").empty();
                     $("#storybox h1").html(returnTitle(indexNum));
                     $("#storybox p").html(returnStory(indexNum));
-                    // $("#voicebox").append(returnAudio(indexNum));
+                    $("#voicebox").append(returnAudio(indexNum));
                     $(this).animate({ opacity: 1 });
                 });
             });
