@@ -28,6 +28,7 @@
       </ul>
     </div>
 
+
     <div id="top" class="header">
       <div class="vert-text">
         <h1>a<span class="title-emphasis">NYC</span>dote</h1>
@@ -50,19 +51,25 @@
     </div>
 
     <div class="row">
-    	<div class="col-md-12 hidden-xs">
-	        <div class="callout text-center">
-            <form>
-                <h1>Or submit your story here...</h1>
-                <fieldset>
-                    <input type="title" id="story-title" name="story-title" class="input-block-level" placeholder="Enter the title of your story">
-                    <textarea rows="5" id="description" name="description" class="input-block-level" placeholder="Tell the world your story (max 300 characters)" maxlength="300"></textarea>   
-                    <input id="location" name="location" class="input-block-level" placeholder="Where did your story take place?">
-                    <button type="submit" class="btn btn-default btn-lg button">Submit story</button>
-                </fieldset>
-            </form>
-	        </div>
-    	</div>
+        <div class="callout text-center col-md-12">
+          <div class="container">
+          <form class="form col-md-6 col-md-offset-3" role="form">
+            <h1>Or submit your story here...</h1>
+            <div class="form-group">
+              <input type="title" id="story-title" name="story-title" class="form-control" placeholder="Enter the title of your story">
+            </div>
+            <div class="form-group">
+              <textarea rows="5" id="description" name="description" class="form-control" placeholder="Tell the world your story (max 300 characters)" maxlength="300"></textarea>
+            </div>
+            <div class="form-group">   
+              <input id="location" name="location" class="form-control" placeholder="Where did your story take place?">
+            </div>
+            <div class="form-group col-md-12 text-center">
+              <button type="submit" class="btn btn-default btn-lg button">Submit story</button>
+            </div>
+          </form>
+          </div>
+        </div>
     </div>
 
 </script>
