@@ -51,10 +51,10 @@ function randomIndex() {
     }
 }
 
-function returnTitle() {
-        return stories.title[indexNum];
+function returnTitle(indexNumber) {
+        return stories.title[indexNumber];
 }
 
-function returnStory() {
-        return stories.story[indexNum];
+function returnStory(indexNumber) {
+        return stories.story[indexNumber];
 }

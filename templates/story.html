@@ -89,8 +89,8 @@
             $(".shuffle-button").click(function() {
                 $("#storybox").animate({ opacity: 0 }, function() {
                     var indexNum = randomIndex();
-                    $("#storybox h1").html(returnTitle());
-                    $("#storybox p").html(returnStory());
+                    $("#storybox h1").html(returnTitle(indexNum));
+                    $("#storybox p").html(returnStory(indexNum));
                     // Pull in random story
                     $(this).animate({ opacity: 1 });
                 });
