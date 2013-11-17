@@ -1,0 +1,60 @@
+var stories = {
+    title: ["From Finances to Father", "Socially Secure", "Summer in New Orleans", "Respect", "Moonwatch", "Money Tree", "Loner", "Lower Class", "No Child Left Behind", "Opinions", "Survival", "Progress March On", "Regret", "Never Give Up", "The Little Things"],
+    story: ["I worked in mutual funds for most of my life, but I'm in the ministry now. I grew up in The Faith. Then I ended up working on Wall Street. And I actually enjoyed the work a lot. For me it was less about the money and more about the excitement and buzz of going to work everyday. I enjoyed making deals and getting things done. But in the end, I just missed God.",
+            "Both my kids will have graduated from college in 4.5 years, and I'm heading to Mexico. I'm not kidding. Social Security goes a long way down there. For $300 a week, I could have a place to stay, a satellite dish, a fishing pole, and some rum.",
+            "Well I can tell you a moment of really simple joy. I was squatting down in New Orleans, living off donations, and one day I was able to obtain ice, lemons, and sugar all at the same time. So I had lemonade for the entire day. It was right after Katrina hit. I was twenty years old, in the midst of a righteous political phase, and I didn't really have plans for the summer. So I said: \"Racist shit is happening in New Orleans! I've got to get down there!\"",
+            "My mom had me when she was really young. We always had more of a friendship than a mother-daughter relationship. You know, I'd always talk to her about my friends and my issues, things like that. I've always been really free to speak my mind. But now that I'm older, and I'm discovering more and more things that I disagree with her about, she doesn't think I respect her enough.",
+            "In my youth, I enjoyed running outside without a watch. With nothing to tell the time but the sun! And nothing to call you home but the moon!",
+            "My greatest struggle is trying to support my mom and sisters back in Jamaica. I try to send money back every month, but sometimes I just can't do it after I've paid my bills. They really depend on the money, because my stepfather is a farmer and a lot of times the crops aren't good. A lot of people back home think that money comes easy in America. They don't know how hard it is.",
+            "My first memory was when I was three years old. My dad set me up on the dresser, and said: \"Jump to daddy!\" Then he let me fall and said, 'Don't trust anyone.' He was twisted like that. I'm pretty sure that's why I'm a loner.",
+            "One time I was in Saks Fifth Avenue, and I got in an elevator. There was a woman already in there. She had selected the seventh floor, but when I got in with her, she changed it to the second floor. \"How'd that make you feel?\" \"Like I didn't belong.\"",
+            "\"There’s no better feeling than seeing the lightbulb go on. To know that there’s a new idea in a child’s head, and that you’re the one that put it there. But if any teacher is being honest, they will tell you that there is a small percentage of students-- that no matter how many times you go over something, they just won’t get it. And it burns you out. If you’re emotionally invested-- and if you aren’t emotionally invested, you’re not doing it right-- but if you are, it can burn you out.\"",
+            "Don't tell me what to do, and I won't tell you what to do. That's my motto. I have a lot of feelings about the decisions of my family members, but I don't ever offer my opinion unless I'm asked. And that's why I'm still invited to parties.",
+            "I came here to try to be a musician or an actor, but sometimes I fear that I'm suffering from delusions of grandeur. It seems that all my time and money, which should be going toward creative endeavors, is being used up just trying to survive.",
+            "I had this idea that I was going to change the world: racial justice, peace on earth, things like that. I went to every anti-war march there was. But I'm pretty sure that I didn't budge society an inch. So now I just sit in the park and watch the little tots walk by. They're so cute. Oh dear, look at that one!",
+            "\"I saw two of my best friends get killed in front of my face in Vietnam. And the worst part is-- I feel like it was my fault. We’d just gotten back to base from a 5 day mission, and we were all dirty and disgusting. Everyone wanted to rest, but I argued with my two friends and eventually convinced them to come to the well with me to bathe. When we got to the there, I told them to go first, while I stood lookout. The thing was booby trapped. When my buddy lowered the bucket to pull up some water, the whole well exploded, and they both got killed. That was on June 3rd. It’s a really hard day for me every single year.\"",
+            "I just came back from a commencement ceremony. An old student of mine just got his Master's Degree in Social Work. He grew up in group homes and foster care. He was a handful back when I taught him, but we never gave up on him and he never gave up on himself. And now look at him. He's already talking about getting his doctorate. Seeing him up there in those robes-- my mind is just filled up with images from today.",
+            "Living in New York is a struggle, because you're always trying to make $5 last for three days. But in a way it's romantic, because The City always gives you little ways to make it."],
+    location: ["Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "West Village", "West Village", "West Village", "West Village", "West Village", "Greenwich Village", "Greenwich Village", "West Village", "Greenwich Village", "West Village"]    
+};
+
+var storiesCopy = {
+    title: ["From Finances to Father", "Socially Secure", "Summer in New Orleans", "Respect", "Moonwatch", "Money Tree", "Loner", "Lower Class", "No Child Left Behind", "Opinions", "Survival", "Progress March On", "Regret", "Never Give Up", "The Little Things"],
+    story: ["I worked in mutual funds for most of my life, but I'm in the ministry now. I grew up in The Faith. Then I ended up working on Wall Street. And I actually enjoyed the work a lot. For me it was less about the money and more about the excitement and buzz of going to work everyday. I enjoyed making deals and getting things done. But in the end, I just missed God.",
+            "Both my kids will have graduated from college in 4.5 years, and I'm heading to Mexico. I'm not kidding. Social Security goes a long way down there. For $300 a week, I could have a place to stay, a satellite dish, a fishing pole, and some rum.",
+            "Well I can tell you a moment of really simple joy. I was squatting down in New Orleans, living off donations, and one day I was able to obtain ice, lemons, and sugar all at the same time. So I had lemonade for the entire day. It was right after Katrina hit. I was twenty years old, in the midst of a righteous political phase, and I didn't really have plans for the summer. So I said: \"Racist shit is happening in New Orleans! I've got to get down there!\"",
+            "My mom had me when she was really young. We always had more of a friendship than a mother-daughter relationship. You know, I'd always talk to her about my friends and my issues, things like that. I've always been really free to speak my mind. But now that I'm older, and I'm discovering more and more things that I disagree with her about, she doesn't think I respect her enough.",
+            "In my youth, I enjoyed running outside without a watch. With nothing to tell the time but the sun! And nothing to call you home but the moon!",
+            "My greatest struggle is trying to support my mom and sisters back in Jamaica. I try to send money back every month, but sometimes I just can't do it after I've paid my bills. They really depend on the money, because my stepfather is a farmer and a lot of times the crops aren't good. A lot of people back home think that money comes easy in America. They don't know how hard it is.",
+            "My first memory was when I was three years old. My dad set me up on the dresser, and said: \"Jump to daddy!\" Then he let me fall and said, 'Don't trust anyone.' He was twisted like that. I'm pretty sure that's why I'm a loner.",
+            "One time I was in Saks Fifth Avenue, and I got in an elevator. There was a woman already in there. She had selected the seventh floor, but when I got in with her, she changed it to the second floor. \"How'd that make you feel?\" \"Like I didn't belong.\"",
+            "\"There’s no better feeling than seeing the lightbulb go on. To know that there’s a new idea in a child’s head, and that you’re the one that put it there. But if any teacher is being honest, they will tell you that there is a small percentage of students-- that no matter how many times you go over something, they just won’t get it. And it burns you out. If you’re emotionally invested-- and if you aren’t emotionally invested, you’re not doing it right-- but if you are, it can burn you out.\"",
+            "Don't tell me what to do, and I won't tell you what to do. That's my motto. I have a lot of feelings about the decisions of my family members, but I don't ever offer my opinion unless I'm asked. And that's why I'm still invited to parties.",
+            "I came here to try to be a musician or an actor, but sometimes I fear that I'm suffering from delusions of grandeur. It seems that all my time and money, which should be going toward creative endeavors, is being used up just trying to survive.",
+            "I had this idea that I was going to change the world: racial justice, peace on earth, things like that. I went to every anti-war march there was. But I'm pretty sure that I didn't budge society an inch. So now I just sit in the park and watch the little tots walk by. They're so cute. Oh dear, look at that one!",
+            "\"I saw two of my best friends get killed in front of my face in Vietnam. And the worst part is-- I feel like it was my fault. We’d just gotten back to base from a 5 day mission, and we were all dirty and disgusting. Everyone wanted to rest, but I argued with my two friends and eventually convinced them to come to the well with me to bathe. When we got to the there, I told them to go first, while I stood lookout. The thing was booby trapped. When my buddy lowered the bucket to pull up some water, the whole well exploded, and they both got killed. That was on June 3rd. It’s a really hard day for me every single year.\"",
+            "I just came back from a commencement ceremony. An old student of mine just got his Master's Degree in Social Work. He grew up in group homes and foster care. He was a handful back when I taught him, but we never gave up on him and he never gave up on himself. And now look at him. He's already talking about getting his doctorate. Seeing him up there in those robes-- my mind is just filled up with images from today.",
+            "Living in New York is a struggle, because you're always trying to make $5 last for three days. But in a way it's romantic, because The City always gives you little ways to make it."],
+    location: ["Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "Greenwich Village", "West Village", "West Village", "West Village", "West Village", "West Village", "Greenwich Village", "Greenwich Village", "West Village", "Greenwich Village", "West Village"]    
+};
+
+function random(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function randomIndex() {
+    if (storiesCopy.length < 1) {
+        return random(stories.story.length);
+    }
+    else {
+        return random(storiesCopy.story.length);
+    }
+}
+
+function returnTitle() {
+        return stories.title[indexNum];
+}
+
+function returnStory() {
+        return stories.story[indexNum];
+}

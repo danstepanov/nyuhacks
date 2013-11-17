@@ -10,6 +10,7 @@
     <!-- Add custom CSS here -->
     <link href="{{ static_url('css/stylish-portfolio.css') }}" rel="stylesheet">
     <link href="{{ static_url('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <script src="{{ static_url('js/stories.js') }}" type="text/javascript"></script>
   </head>
 
 	<body>
@@ -87,8 +88,10 @@
         $(document).ready(function() {
             $(".shuffle-button").click(function() {
                 $("#storybox").animate({ opacity: 0 }, function() {
+                    var indexNum = randomIndex();
+                    $("#storybox h1").html(returnTitle());
+                    $("#storybox p").html(returnStory());
                     // Pull in random story
-                    $(this).html("<div class='story'><h1>Next story.</h1></div>");
                     $(this).animate({ opacity: 1 });
                 });
             });
