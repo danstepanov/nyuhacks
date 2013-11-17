@@ -54,8 +54,11 @@
 	        <div class="callout text-center">
             <form role="form">
   	        	<h1>Or submit your story here...</h1>
-  	        	<textarea rows="5" class="col-md-12" placeholder="Tell the world your story (max 400 characters)" maxlength="400"></textarea>
-  	        	<button class="btn btn-default btn-lg button" type="button">Submit story</button>
+              <div class="form-group">
+                <input type="title" class="form-control" name="title-input" placeholder="Enter the title of your story">
+              </div>
+  	        	<textarea type="text" name="story" rows="5" class="col-md-12" placeholder="Tell the world your story (max 400 characters)" maxlength="400" required></textarea>
+  	        	<button class="btn btn-default btn-lg button" type="submit">Submit story</button>
             </form>
 	        </div>
     	</div>
