@@ -1,0 +1,8 @@
+asyncmongo==1.2.1
+gunicorn==0.14.6
+pycurl==7.19.0
+pymongo==2.4
+python-dateutil==2.1
+pytz==2012d
+simplejson==2.5.2
+tornado==2.2.1
