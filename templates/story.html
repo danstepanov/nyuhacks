@@ -218,14 +218,13 @@
                 }
             }
         }
-        }
             $(".shuffle-button").click(function() {
                 $("#storybox").animate({ opacity: 0 }, function() {
                     var indexNum = randomIndex();
                     $("#voicebox").empty();
                     $("#storybox h1").html(returnTitle(indexNum));
                     $("#storybox p").html(returnStory(indexNum));
-                    $("#voicebox").append(returnAudio());
+                    $("#voicebox").append(returnAudio(indexNum));
                     $(this).animate({ opacity: 1 });
                 });
             });
