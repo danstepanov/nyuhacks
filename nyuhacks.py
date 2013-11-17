@@ -8,6 +8,8 @@ import logging
 import datetime
 
 import os.path
+
+import random
 #import libraries
 
 # Define Port
@@ -34,8 +36,26 @@ class Application(tornado.web.Application):
         tornado.web.Application.__init__(self, handlers, **settings)
 
 class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write("Hello, world")
+	@tornado.web.asynchronous
+	def get(self):
+		stories = range(100)
+		for x in range(100):
+			story = {
+			"id": str(x),
+        	"title": str(random.randrange(1000)),
+        	"body": str(random.randrange(1000000000000000)),
+	        "location": [random.randrange(100), random.randrange(100)],
+	        "flags": 0}
+		print stories
+		self.finish()
+
+# Input stories
+	# Title
+	# Story
+	# Location (lat and lng)
+# Pull a collection of stories
+	# Based on a certain distance around you
+# Be able to flag a story
 
 # Main Runtime
 def main():
@@ -53,6 +73,5 @@ def main():
 
     # Start main loop
     mainloop.instance().start()
-
 
 if __name__ == "__main__": main()
