@@ -56,6 +56,7 @@ class BaseHandler(tornado.web.RequestHandler):
 	def db(self):
 		if not hasattr(self, '_db'):
 			self._db = asyncmongo.Client(pool_id='test_pool', host='paulo.mongohq.com', port=10009, dbuser="heroku", dbpass="moistbiscuit", dbname="app19552629", maxcached=10, maxconnections=1000)
+			print self.db.find();
 		return self._db
 
 	@property
