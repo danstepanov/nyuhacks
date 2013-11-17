@@ -28,11 +28,15 @@ body {
 
 /* Side Menu */
 
+.title-emphasis {
+  color: #3399FF;
+}
+
 #sidebar-wrapper {
   margin-right: -250px;
   right: 0;
   width: 250px;
-  background: #85C2FF;
+  background: #C2F0FF;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -82,7 +86,7 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #FFBD00;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -127,9 +131,7 @@ body {
 
 
 
-.title-emphasis {
-  color: #3399FF;
-}
+
 
 /* Intro */
 
@@ -220,6 +222,35 @@ i.service-icon:hover {
   margin: 10px;
 }
 
+/* Story Formatting */
+.story {
+  margin-top: 130px;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.story h1 {
+  font-size: 5em;
+}
+
+.story p {
+  font-size: 1.5em;
+}
+
+.side-picture {
+  display: table;
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  opacity: 0.7;
+  background: url(../img/statue-of-liberty-2.jpg) no-repeat center center fixed; 
+}
+
+.shuffle-button {
+  position: fixed;
+  top: 70%;
+  left: 30px;
+}
 /* Footer */
 
 footer {

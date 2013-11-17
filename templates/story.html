@@ -6,64 +6,45 @@
     <meta name="author" content="NYU Dream Team">
     <title>NYU Dream Team</title>
     <!-- Bootstrap core CSS -->
-    <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ static_url(css/bootstrap.css) }}" rel="stylesheet">
     <!-- Add custom CSS here -->
     <link href="{{ static_url('css/stylish-portfolio.css') }}" rel="stylesheet">
     <link href="{{ static_url('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
   </head>
 
 	<body>
-
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="icon-remove"></i></a>
         <li class="sidebar-brand"><a href="#">a<span class="title-emphasis">NYC</span>dote</a></li>
         <li>
-        	<form class="navbar-search pull-left">
-			  <input type="text" class="search-query" placeholder="Search for stories">
-			</form>
-  			<button type="submit" class="btn btn-default">Submit</button>
+          <form class="navbar-search pull-left">
+        <input type="text" class="search-query" placeholder="Search for stories">
+      </form>
+        <button type="submit" class="btn btn-default">Submit</button>
         </li>
       </ul>
     </div>
 
-    <div id="top" class="header">
-      <div class="vert-text">
-        <h1>a<span class="title-emphasis">NYC</span>dote</h1>
-        <h3>The city with a million stories to be heard...</h3>
-        <a href="#services" class="btn btn-default btn-lg button">Get Started</a>
-      </div>
+<!--Picture floated on left side -->
+    <div class="side-picture pull-left visible-md visible-lg">
     </div>
+<!--/end Picture-->
 
-    <div id="services" class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="service-item">
-              <a href="story.html" id="shuffle-button-home"><i class="service-icon icon-comment"></i></a>
-              <h4><strong>Press the button</strong> to get started exploring a<strong class="title-emphasis">NYC</strong>dote!</h4>
-            </div>
+    <div class="container">
+      <div class="row story">
+        <div class="col-md-6 col-md-offset-4">
+          <div id="storybox">
+            <h1>Title</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
           </div>
         </div>
       </div>
+      <div class="shuffle-button col-md-12 text-center">
+        <a href="#"><i class="service-icon icon-comment"></i></a>
+      </div>
     </div>
-
-    <div class="row">
-    	<div class="col-md-12 hidden-xs">
-	        <div class="callout text-center">
-            <form role="form">
-  	        	<h1>Or submit your story here...</h1>
-  	        	<textarea rows="5" class="col-md-12" placeholder="Tell the world your story (max 400 characters)" maxlength="400"></textarea>
-  	        	<button class="btn btn-default btn-lg button" type="button">Submit story</button>
-            </form>
-	        </div>
-    	</div>
-    </div>
-
-</script>
-  <!-- /Google Analytics API -->
-
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/jquery.js"></script>
@@ -101,6 +82,18 @@
       });
     </script>
 
-	</body>
+<!--Fade in/out storybox -->
+    <script>
+        $(document).ready(function() {
+            $(".shuffle-button").click(function() {
+                $("#storybox").animate({ opacity: 0 }, function() {
+                    // Pull in random story
+                    $(this).html("<div class='story'><h1>Next story.</h1></div>");
+                    $(this).animate({ opacity: 1 });
+                });
+            });
+        });
+      </script>
+<!--/end fade-->
 
-</html>
+  </body>
