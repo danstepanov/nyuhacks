@@ -91,11 +91,6 @@ class MainHandler(BaseHandler):
 
 class StoryHandler(BaseHandler):
 	def get(self):
-		client = MongoClient("mongodb://heroku:5461dbaffe80d5d72d8a37cc72ea25a9@paulo.mongohq.com:10009/app19552629")
-		#client.the_database.authenticate('yamil', 'sendgrid')
-		db = client['app19552629']
-		usercollection = db.users
-		print usercollection.find({"neighborhood": "Greenwich Village"})
 		self.render("story.html")
 
 # Input stories
