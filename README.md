@@ -3,4 +3,6 @@ nyuhacks
 
 NYU Dream Team project
 
-Jon Chan - Organizer of NYUHacks
+Jon Chan - Organizer
+
+Dan Stepanov - Intellectual Bad-Ass
