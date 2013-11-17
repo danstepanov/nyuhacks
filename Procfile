@@ -1,1 +1,1 @@
-web: python nyuhacks.py
+web: python nyuhacks.py --port=$PORT
