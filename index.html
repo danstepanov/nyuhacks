@@ -13,7 +13,19 @@
   </head>
 
 	<body>
+    
+  <!-- GOOGLE ANALYTICS -->  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-39835762-2', 'anycdote.herokuapp.com');
+    ga('send', 'pageview');
+  </script>
+  
+  <!-- MENU -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
@@ -59,16 +71,15 @@
     	</div>
     </div>
 
-</script>
   <!-- /Google Analytics API -->
 
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <!-- <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script> -->
 
   <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
-  <script>
+ <!-- <script>
       $("#menu-close").click(function(e) {
           e.preventDefault();
           $("#sidebar-wrapper").toggleClass("active");
@@ -97,7 +108,7 @@
           }
         });
       });
-    </script>
+    </script> -->
 
 	</body>
 
