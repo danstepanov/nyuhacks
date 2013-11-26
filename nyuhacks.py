@@ -3,7 +3,7 @@ from datetime import datetime
 from flask import Flask, request, render_template, redirect, url_for
 from flask.ext.mongokit import MongoKit, Document
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 render_template('index.html')
 #class Submit(Document):
