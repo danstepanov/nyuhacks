@@ -5,18 +5,19 @@ from flask.ext.mongokit import MongoKit, Document
 
 app = Flask(__name__)
 
-class Submit(Document):
-	__collection__ = 'stories'
-	structure = {
-		'title': unicode,
-		'story': unicode,
-		'neighborhood': unicode,
-	}
-	required_fields = ['title','story','neighborhood']
-	use_dot_notation = True
+render_template('index.html')
+#class Submit(Document):
+#	__collection__ = 'stories'
+#	structure = {
+#		'title': unicode,
+#		'story': unicode,
+#		'neighborhood': unicode,
+#	}
+#	required_fields = ['title','story','neighborhood']
+#	use_dot_notation = True
 
-db = MongoKit(app)
-db.register([Submit])
+#db = MongoKit(app)
+#db.register([Submit])
 
 #@app.route('/new', methods=["GET", "POST"])
 #def new_submit():
