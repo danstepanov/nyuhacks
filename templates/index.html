@@ -6,19 +6,28 @@
     <meta name="author" content="NYU Dream Team">
     <title>NYU Dream Team</title>
     <!-- Bootstrap core CSS -->
-    <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     <!-- Add custom CSS here -->
-    <link href="{{ static_url('css/stylish-portfolio.css') }}" rel="stylesheet">
-    <link href="{{ static_url('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/stylish-portfolio.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}">
   </head>
 
 	<body>
+    
+  <!-- GOOGLE ANALYTICS -->  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date(); a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-39835762-2', 'anycdote.herokuapp.com');
+    ga('send', 'pageview');
+  </script>
+  
+  <!-- MENU -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="icon-remove"></i></a>
-        <li class="sidebar-brand"><a href="#">a<span class="title-emphasis">NYC</span>dote</a></li>
+        <li class="sidebar-brand"><a href="#">Welcome!</a></li>
         <li>
         	<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search for stories">
@@ -28,11 +37,10 @@
       </ul>
     </div>
 
-
     <div id="top" class="header">
       <div class="vert-text">
         <h1>a<span class="title-emphasis">NYC</span>dote</h1>
-        <h3><em>"You don't realize how many people are different, yet they still manage to live together...that's what makes this city beautiful."</em></h3>
+        <h3 style="color:red;">The city with a million stories to be heard...</h3>
         <a href="#services" class="btn btn-default btn-lg button">Get Started</a>
       </div>
     </div>
@@ -42,7 +50,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="service-item">
-              <a href="/story" id="shuffle-button-home"><i class="service-icon icon-comment"></i></a>
+              <a href="#" class="shuffle-button"><i class="service-icon icon-comment"></i></a>
               <h4><strong>Press the button</strong> to get started exploring a<strong class="title-emphasis">NYC</strong>dote!</h4>
             </div>
           </div>
@@ -51,37 +59,22 @@
     </div>
 
     <div class="row">
-        <div class="callout text-center col-md-12">
-          <div class="container">
-          <form class="form col-md-6 col-md-offset-3" role="form">
-            <h1>Or submit your story here...</h1>
-            <div class="form-group">
-              <input type="title" id="story-title" name="story-title" class="form-control" placeholder="Enter the title of your story">
-            </div>
-            <div class="form-group">
-              <textarea rows="5" id="description" name="description" class="form-control" placeholder="Tell the world your story (max 300 characters)" maxlength="300"></textarea>
-            </div>
-            <div class="form-group">   
-              <input id="location" name="location" class="form-control" placeholder="Where did your story take place?">
-            </div>
-            <div class="form-group col-md-12 text-center">
-              <button type="submit" class="btn btn-default btn-lg button" onclick="alert('Thank you for sharing your memories with us!');">Submit Story</button>
-            </div>
-          </form>
-          </div>
-        </div>
+    	<div class="col-md-12 hidden-xs">
+	        <div class="callout text-center">
+	        	<h1>Or submit your story here...</h1>
+	        	<textarea rows="5" class="col-md-12" placeholder="Tell the world your story (max 400 characters)" maxlength="400"></textarea>
+	        	<button class="btn btn-default btn-lg button" type="button">Submit story</button>
+	        </div>
+    	</div>
     </div>
-
-</script>
-  <!-- /Google Analytics API -->
 
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="{{ static_url('js/jquery.js') }}"></script>
-  <script src="{{ static_url('js/bootstrap.js') }}"></script>
+  <!-- <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script> -->
 
   <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
-  <script>
+ <!-- <script>
       $("#menu-close").click(function(e) {
           e.preventDefault();
           $("#sidebar-wrapper").toggleClass("active");
@@ -110,7 +103,7 @@
           }
         });
       });
-    </script>
+    </script> -->
 
 	</body>
 
